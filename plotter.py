@@ -57,6 +57,7 @@ def create_tag_graph(god_list: list):
             else:
                 tags_and_counts[tag] = 1
 
+    tags_and_counts = sorted(tags_and_counts.values(), reverse=True)
     fig1, ax1 = plt.subplots()
 
     names = list(tags_and_counts.keys())

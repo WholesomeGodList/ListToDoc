@@ -1,7 +1,7 @@
 import pylatex
 
 
-def get_list_stats_latex(god_list: list):
+def get_list_stats_latex():
     doc = pylatex.Document(default_filepath='output/')
 
     with doc.create(pylatex.Section('Tier Distribution')):
