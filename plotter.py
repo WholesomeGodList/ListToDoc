@@ -66,3 +66,23 @@ def create_tag_graph(god_list: list):
     ax1.bar(names, values)
 
     plt.savefig('output/tags.png')
+
+
+def create_parody_graph(god_list: list):
+    parodies_and_counts = {'Original': 0}
+
+    for entry in god_list:
+        if entry['parody'] == 'None':
+            parodies_and_counts['Original'] += 1
+        elif entry['parody'] in parodies_and_counts:
+            parodies_and_counts[entry['parody']] += 1
+        else:
+            parodies_and_counts[entry['parody']] = 1
+
+    fig1, ax1 = plt.subplots()
+
+    ax1.pie(parodies_and_counts.values(), labels=parodies_and_counts.keys(), autopct='%1.1f%%',
+            shadow=True, startangle=90)
+    ax1.axis('equal')
+
+    plt.savefig('output/parodies.png')

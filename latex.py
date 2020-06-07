@@ -21,3 +21,9 @@ def get_list_stats_latex():
 
         with doc.create(pylatex.Figure()):
             plot.add_image(filename='tags.png')
+
+    with doc.create(pylatex).Section('Parodies'):
+        doc.append('What each doujin is based on')
+
+        with doc.create(pylatex.Figure()):
+            plot.add_image(filename='parodies.png')
