@@ -81,7 +81,10 @@ def create_parody_graph(god_list: list):
 
     fig1, ax1 = plt.subplots()
 
-    ax1.pie(parodies_and_counts.values(), labels=parodies_and_counts.keys(), autopct='%1.1f%%',
+    labels = list(parodies_and_counts.keys())
+    values = list(parodies_and_counts.values())
+
+    ax1.pie(values, labels=labels, autopct='%1.1f%%',
             shadow=True, startangle=90)
     ax1.axis('equal')
 
