@@ -15,5 +15,6 @@ def main():
 	plotter.create_tag_graph(god_list)
 	latex.get_list_stats_latex()
 
+
 if __name__ == "__main__":
 	main()
